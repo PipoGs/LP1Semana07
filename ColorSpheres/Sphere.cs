@@ -7,6 +7,20 @@ namespace ColorSpheres
 {
     public class Sphere
     {
-        
+        private Color _color;
+        private float _radius;
+        private int _ThrowCounter;
+
+        public Sphere(Color color, float radius)
+        {
+            _color = color;
+            _radius = radius;
+            _ThrowCounter = 0;
+        }
+
+        private void Pop()
+        {
+
+        }
     }
 }
