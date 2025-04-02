@@ -20,7 +20,22 @@ namespace ColorSpheres
 
         private void Pop()
         {
+            _radius = 0;
 
+        }
+
+        private void _Throw()
+        {
+            if (_radius > 0)
+            {
+                _ThrowCounter++;
+            }
+
+        }
+
+        public int GetTimesThrown()
+        {
+            return _ThrowCounter;
         }
     }
 }
