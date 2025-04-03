@@ -24,7 +24,7 @@ namespace ColorSpheres
 
         }
 
-        public void _Throw()
+        public void Throw()
         {
             if (_radius > 0)
             {

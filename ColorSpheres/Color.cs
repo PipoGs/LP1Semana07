@@ -7,9 +7,9 @@ namespace ColorSpheres
 {
     public class Color
     {
-        private byte _red;
-        private byte _blue;
-        private byte _green;
+        private readonly byte _red;
+        private readonly byte _blue;
+        private readonly byte _green;
         private byte _alpha;
 
 
