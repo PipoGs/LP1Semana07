@@ -8,11 +8,8 @@ namespace MyRoguelike
     public class Hero
     {
         private float _health;
-        private readonly float _maxHealth;
         private int _xp;
         private readonly string _name;
-        private readonly string _level;
-        private float _damage;
 
         public string Name
         {
