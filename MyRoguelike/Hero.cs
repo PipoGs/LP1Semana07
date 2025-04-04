@@ -19,25 +19,29 @@ namespace MyRoguelike
             get => _health;
             set
             {
-                if (0 < value < MaxHealth)
+                if (value > 0 && value < MaxHealth)
                 {
                     _health = value;
                 }
-                else if (value > MaxHealth)
+                else if (value <= 0)
+                {
+                    _health = 0;
+                }
+                else if (value >= MaxHealth)
                 {
                     _health = MaxHealth;
                 }
             }
         }
 
-        public int Xp
+        public int XP
         {
             get => _xp;
             set
             {
                 if (value > 0)
                 {
-                    _xp = value;
+                    _xp += value;
                 }
 
             }
@@ -45,12 +49,12 @@ namespace MyRoguelike
 
         public int Level
         {
-            get => 1 + GetXp() / 1000;
+            get => 1 + XP / 1000;
         }
 
         public float MaxHealth
         {
-            get => _maxHealth = 100 + (Level - 1) * 20;
+            get => 100 + (Level - 1) * 20;
         }
 
         public float TakeDamage(float damage)
@@ -58,13 +62,20 @@ namespace MyRoguelike
             if (damage > 0)
             {
                 Health -= damage;
-                SetXp += (damage / 20);
+                _xp += (int)damage / 20;
                 return Health;
             }
             else
             {
                 return Health;
             }
+        }
+
+        public Hero(string name)
+        {
+            _name = name;
+            _health = MaxHealth;
+            _xp = 0;
         }
     }
 }
