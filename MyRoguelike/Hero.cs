@@ -46,3 +46,4 @@ namespace MyRoguelike
             get => 1 + GetXp() / 1000;
         }
     }
+}
