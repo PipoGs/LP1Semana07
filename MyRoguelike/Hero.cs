@@ -47,9 +47,9 @@ namespace MyRoguelike
             get => 1 + GetXp() / 1000;
         }
 
-        public MaxHealth
+        public float MaxHealth
         {
             get => _maxHealth = 100 + (Level - 1) * 20;
         }
-}
+    }
 }
