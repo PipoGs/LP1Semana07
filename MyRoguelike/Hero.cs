@@ -8,6 +8,7 @@ namespace MyRoguelike
     public class Hero
     {
         private float _health;
+        private readonly float _maxHealth;
         private int _xp;
         private readonly string _name;
         private readonly string _level;
@@ -45,5 +46,10 @@ namespace MyRoguelike
         {
             get => 1 + GetXp() / 1000;
         }
-    }
+
+        public MaxHealth
+        {
+            get => _maxHealth = 100 + (Level - 1) * 20;
+        }
+}
 }
