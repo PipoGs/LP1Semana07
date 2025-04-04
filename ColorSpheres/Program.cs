@@ -16,8 +16,8 @@ namespace ColorSpheres
             sphere.Throw();
             sphere.Throw();
 
-            System.Console.Write({ color1.GetGrey()});
-            System.Console.Write({ sphere.GetTimesThrown()});
+            System.Console.Write($"{color.GetGrey()}");
+            System.Console.Write($"{sphere.GetTimesThrown()}");
         }
     }
 }
