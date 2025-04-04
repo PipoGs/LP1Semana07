@@ -38,9 +38,9 @@ namespace ColorSpheres
             return _radius;
         }
 
-        public int GetTimesThrown()
+        public int GetTimesThrown
         {
-            return _ThrowCounter;
+            get => _ThrowCounter;
         }
     }
 }
