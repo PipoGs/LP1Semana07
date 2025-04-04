@@ -14,6 +14,10 @@ namespace MyRoguelike
         private readonly string _level;
         private float _damage;
 
+        public string Name
+        {
+            get => _name;
+        }
         public float Health
         {
             get => _health;
@@ -39,11 +43,7 @@ namespace MyRoguelike
             get => _xp;
             set
             {
-                if (value > 0)
-                {
-                    _xp += value;
-                }
-
+                _xp += value;
             }
         }
 
