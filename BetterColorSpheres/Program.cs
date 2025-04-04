@@ -1,12 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace BetterColorSpheres
+namespace ColorSpheres
 {
     public class Program
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP1!");
+            Color color = new Color(255, 50, 125);
+            Sphere sphere = new Sphere(color, 5.0f);
+            sphere.Throw();
+            sphere.Pop();
+            sphere.Throw();
+            sphere.Throw();
+
+            System.Console.Write($"{color1.GetGrey}");
+            System.Console.Write($"{sphere.GetTimesThrown}");
         }
     }
 }
